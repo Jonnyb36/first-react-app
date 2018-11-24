@@ -5,6 +5,8 @@ import Game from './components/game/game';
 import TableAndChartContainer from './components/datatableAndChart'
 import { Row, Col } from 'reactstrap'
 import FormButton from './components/formButton'
+import EditableFormButton from './components/promptPopUp'
+import ButtonTipExample from './components/buttonTips'
 // ========================================
 
 export default class App extends React.Component {
@@ -12,7 +14,15 @@ export default class App extends React.Component {
     return (
       <div>
         <Row>
-        <FormButton/>
+          <Col xs='6'>
+            <FormButton/>
+          </Col>
+          <Col xs='6'>
+            <EditableFormButton/>
+          </Col>
+          <Col xs='6'>
+            <ButtonTipExample/>
+          </Col>
         </Row>
         <Row>
           <Game />
